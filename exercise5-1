@@ -19,7 +19,7 @@ int main(void){
     scanf_s("%d", &c);
 
     while(a){
-        if(c=="y"){
+        if(c==1){
             x = 1 + (rand()%6);
             y = 1 + (rand()%6);
             z = x + y;
@@ -67,7 +67,7 @@ int main(void){
                 }
         }
         }
-        else if(c=="n"){
+        else if(c==0){
             a = false;
             return;
         }
