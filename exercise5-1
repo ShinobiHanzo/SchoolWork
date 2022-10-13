@@ -1,0 +1,20 @@
+//Game of Chance
+#include <stdio.h>
+
+int main(void){
+    
+    //int value var
+        //rand value
+    unsigned int x;
+    unsigned int y;
+        //rand sum
+    unsigned int z;
+
+    //string-bool var
+    bool character = false;
+
+    printf("roll dice? y/n:");
+    scanf_s("%s", );
+
+    
+}
