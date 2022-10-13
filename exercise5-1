@@ -46,16 +46,20 @@ int main(void){
             }
             //roll point-win
             case(!= 7 || != 11 || !=2 || !=3 || != 12){
-                int temp = z;             
-                while(z!=7){                    
-                    printf("you rolled: %d + %d. Total: %d", x, y, z);
-                    if(z = temp){
-                        prinf("\nYou Win the Point!!!");
-                        scanf_s("\nPlay again? y/n: %s", &c);
-                    }
+                int point = z;             
+                while(z!=7){
                     x = rand(%6) +1;
                     y = rand(%6) +1;
                     z = x + y;
+                    printf("you rolled: %d + %d. Total: %d", x, y, z);
+                    if(z = point){
+                        prinf("\nYou Win the Point!!!");
+                        scanf_s("\nPlay again? y/n: %s", &c);
+                    }
+                    else if(z = 7){
+                        prinf("\nDefault! You Lose!");
+                        scanf_s("\nTry again? y/n: %s", &c);
+                    }
                 }
             }
         }
