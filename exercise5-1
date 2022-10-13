@@ -65,7 +65,7 @@ int main(void){
                         }
                     }
                 }
-        }
+            }
         }
         else if(c==0){
             a = false;
