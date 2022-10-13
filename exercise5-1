@@ -16,7 +16,7 @@ int main(void){
     unsigned char c;
 
     printf("roll dice? y/n:");
-    scanf_s("%s", &c);
+    scanf_s("%s", &str(c));
 
     while(a){
         switch(c){
@@ -35,13 +35,13 @@ int main(void){
          //roll default win
             case 7 || 11:{
                 printf("\nYou Win!!!");
-                scanf_s("\nPlay again? y/n: %s", &c);
+                scanf_s("\nPlay again? y/n: %s", &str(c));
                 return;
             }
             //roll default loss
             case 2 || 3 || 12:{
                 prinf("\nDefault! You Lose!");
-                scanf_s("\nTry again? y/n: %s", &c);
+                scanf_s("\nTry again? y/n: %s", &str(c));
                 return;
             }
             //roll point-win
@@ -54,11 +54,11 @@ int main(void){
                     printf("you rolled: %d + %d. Total: %d", x, y, z);
                     if(z = point){
                         prinf("\nYou Win the Point!!!");
-                        scanf_s("\nPlay again? y/n: %s", &c);
+                        scanf_s("\nPlay again? y/n: %s", &str(c));
                     }
                     else if(z = 7){
                         prinf("\nDefault! You Lose!");
-                        scanf_s("\nTry again? y/n: %s", &c);
+                        scanf_s("\nTry again? y/n: %s", &str(c));
                     }
                 }
             }
