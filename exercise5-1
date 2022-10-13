@@ -48,7 +48,7 @@ int main(void){
                     return;
                 }
                 //roll point-win
-                case 7! || 11! || 2! || 3! || 12!:{
+                case z != 7 || 11 || 2 || 3 || 12:{
                     int point = z;             
                     while(z!=7){
                         x = 1 + (rand()%6);
