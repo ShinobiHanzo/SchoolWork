@@ -20,8 +20,8 @@ int main(void){
 
     while(a){
         if(c==1){
-            x = 1 + (rand()%6);
-            y = 1 + (rand()%6);
+            x = 1 + (srand(time(NULL))%6);
+            y = 1 + (srand(time(NULL))%6);
             z = x + y;
             printf("you rolled: %d + %d. Total: %d", x, y, z);
             switch(z){
@@ -51,8 +51,8 @@ int main(void){
                 default:{
                     int point = z;             
                     while(z!=7){
-                        x = 1 + (rand()%6);
-                        y = 1 + (rand()%6);
+                        x = 1 + (srand(time(NULL))%6);
+                        y = 1 + (srand(time(NULL))%6);
                         z = x + y;
                         printf("you rolled: %d + %d. Total: %d", x, y, z);
                         if(z = point){
