@@ -13,10 +13,10 @@ int main(void){
 
     //string-bool var
     bool a=true;
-    unsigned char c;
+    unsigned int c;
 
-    printf("roll dice? y/n:");
-    scanf_s("%s", str(c));
+    printf("roll dice? 1/0:");
+    scanf_s("%d", &c);
 
     while(a){
         if(c=="y"){
@@ -28,23 +28,23 @@ int main(void){
              //roll default win
                 case 7 || 11:{
                     printf("\nYou Win!!!");
-                   scanf_s("\nPlay again? y/n: %s", str(c));
+                   scanf_s("\nPlay again? y/n: %d", &c);
                    return;
                 }
                //roll default loss
                 case 2:{
                     prinf("\nDefault! You Lose!");
-                    scanf_s("\nTry again? y/n: %s", str(c));
+                    scanf_s("\nTry again? y/n: %d", c);
                     return;
                 }
                 case 3:{
                     prinf("\nDefault! You Lose!");
-                    scanf_s("\nTry again? y/n: %s", str(c));
+                    scanf_s("\nTry again? y/n: %d", c);
                     return;
                 }
                 case 12:{
                     prinf("\nDefault! You Lose!");
-                    scanf_s("\nTry again? y/n: %s", str(c));
+                    scanf_s("\nTry again? y/n: %d", c);
                     return;
                 }
                 //roll point-win
@@ -57,11 +57,11 @@ int main(void){
                         printf("you rolled: %d + %d. Total: %d", x, y, z);
                         if(z = point){
                             prinf("\nYou Win the Point!!!");
-                            scanf_s("\nPlay again? y/n: %s", str(c));
+                            scanf_s("\nPlay again? y/n: %d", &c);
                         }
                         else if(z = 7){
                             prinf("\nDefault! You Lose!");
-                            scanf_s("\nTry again? y/n: %s", str(c));
+                            scanf_s("\nTry again? y/n: %d", c);
                         }
                     }
                 }
