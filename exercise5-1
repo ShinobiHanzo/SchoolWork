@@ -1,5 +1,6 @@
 //Game of Chance
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(void){
     
@@ -11,10 +12,29 @@ int main(void){
     unsigned int z;
 
     //string-bool var
-    bool character = false;
+    bool a=true, b=false;
+    unsigned char c;
 
     printf("roll dice? y/n:");
-    scanf_s("%s", );
+    scanf_s("%s", &c);
 
-    
+    switch(c){
+        case ("y"){
+            x = rand(%6) +1;
+            y = rand(%6) +1;
+            z = x + y;
+        }
+        case("n"){
+            return;
+        }
+    }
+    printf("you rolled: %d + %d. Total: %d", x, y, z);
+    switch(z){
+        case( 7 || 11){
+            printf("\nYou Win!!!");
+            scanf_s("\nPlay again? y/n: %s", c);
+            return;
+        }
+        case()
+    }
 }
