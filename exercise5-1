@@ -19,49 +19,48 @@ int main(void){
     scanf_s("%s", str(c));
 
     while(a){
-        switch(c){
-            case c=="y":{
-                x = 1+ (rand()%6);
-                y = 1+ (rand()%6);
-                z = x + y;
-            }
-            case c=="n":{
-                a = false;
-                return;
-            }
-        }
-        printf("you rolled: %d + %d. Total: %d", x, y, z);
-        switch(z){
-         //roll default win
-            case 7 || 11:{
-                printf("\nYou Win!!!");
-                scanf_s("\nPlay again? y/n: %s", str(c));
-                return;
-            }
-            //roll default loss
-            case 2 || 3 || 12:{
-                prinf("\nDefault! You Lose!");
-                scanf_s("\nTry again? y/n: %s", str(c));
-                return;
-            }
-            //roll point-win
-            case!= 7 || != 11 || !=2 || !=3 || != 12:{
-                int point = z;             
-                while(z!=7){
-                    x = rand(%6) +1;
-                    y = rand(%6) +1;
-                    z = x + y;
-                    printf("you rolled: %d + %d. Total: %d", x, y, z);
-                    if(z = point){
-                        prinf("\nYou Win the Point!!!");
-                        scanf_s("\nPlay again? y/n: %s", str(c));
-                    }
-                    else if(z = 7){
-                        prinf("\nDefault! You Lose!");
-                        scanf_s("\nTry again? y/n: %s", str(c));
+        if(c=="y"){
+            x = rand(%6) +1;
+            y = rand(%6) +1;
+            z = x + y;
+            printf("you rolled: %d + %d. Total: %d", x, y, z);
+            switch(z){
+             //roll default win
+                case 7 || 11:{
+                    printf("\nYou Win!!!");
+                   scanf_s("\nPlay again? y/n: %s", str(c));
+                   return;
+               }
+               //roll default loss
+                case 2 || 3 || 12:{
+                    prinf("\nDefault! You Lose!");
+                    scanf_s("\nTry again? y/n: %s", str(c));
+                    return;
+                }
+                //roll point-win
+                case!= 7 || != 11 || !=2 || !=3 || != 12:{
+                    int point = z;             
+                    while(z!=7){
+                        x = rand(%6) +1;
+                        y = rand(%6) +1;
+                        z = x + y;
+                        printf("you rolled: %d + %d. Total: %d", x, y, z);
+                        if(z = point){
+                            prinf("\nYou Win the Point!!!");
+                            scanf_s("\nPlay again? y/n: %s", str(c));
+                        }
+                        else if(z = 7){
+                            prinf("\nDefault! You Lose!");
+                            scanf_s("\nTry again? y/n: %s", str(c));
+                        }
                     }
                 }
-            }
         }
+        }
+        else if(c=="n"){
+            a = false;
+            return;
+        }
+        
     }  
 }
