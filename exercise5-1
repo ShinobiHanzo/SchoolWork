@@ -38,12 +38,12 @@ int main(void){
                     return;
                 }
                 case 3:{
-                    prinf("\nDefault! You Lose!");
+                    printf("\nDefault! You Lose!");
                     scanf_s("\nTry again? y/n: %d", c);
                     return;
                 }
                 case 12:{
-                    prinf("\nDefault! You Lose!");
+                    printf("\nDefault! You Lose!");
                     scanf_s("\nTry again? y/n: %d", c);
                     return;
                 }
@@ -56,11 +56,11 @@ int main(void){
                         z = x + y;
                         printf("you rolled: %d + %d. Total: %d", x, y, z);
                         if(z = point){
-                            prinf("\nYou Win the Point!!!");
+                            printf("\nYou Win the Point!!!");
                             scanf_s("\nPlay again? y/n: %d", &c);
                         }
                         else if(z = 7){
-                            prinf("\nDefault! You Lose!");
+                            printf("\nDefault! You Lose!");
                             scanf_s("\nTry again? y/n: %d", c);
                         }
                     }
