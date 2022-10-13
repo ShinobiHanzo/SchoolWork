@@ -12,29 +12,53 @@ int main(void){
     unsigned int z;
 
     //string-bool var
-    bool a=true, b=false;
+    bool a=true;
     unsigned char c;
 
     printf("roll dice? y/n:");
     scanf_s("%s", &c);
 
-    switch(c){
-        case ("y"){
-            x = rand(%6) +1;
-            y = rand(%6) +1;
-            z = x + y;
+    while(a){
+        switch(c){
+            case ("y"){
+                x = rand(%6) +1;
+                y = rand(%6) +1;
+                z = x + y;
+            }
+            case("n"){
+                a = false;
+                return;
+            }
         }
-        case("n"){
-            return;
+        printf("you rolled: %d + %d. Total: %d", x, y, z);
+        switch(z){
+         //roll default win
+            case( 7 || 11){
+                printf("\nYou Win!!!");
+                scanf_s("\nPlay again? y/n: %s", &c);
+                return;
+            }
+            //roll default loss
+            case( 2 || 3 || 12){
+                prinf("\nDefault! You Lose!");
+                scanf_s("\nTry again? y/n: %s", &c);
+                return;
+            }
+            //roll point-win
+            case(!= 7 || != 11 || !=2 || !=3 || != 12){
+                int temp = z;             
+                while(z!=7){                    
+                    printf("you rolled: %d + %d. Total: %d", x, y, z);
+                    if(z = temp){
+                        prinf("\nYou Win the Point!!!");
+                        scanf_s("\nPlay again? y/n: %s", &c);
+                    }
+                    x = rand(%6) +1;
+                    y = rand(%6) +1;
+                    z = x + y;
+                }
+            }
         }
-    }
-    printf("you rolled: %d + %d. Total: %d", x, y, z);
-    switch(z){
-        case( 7 || 11){
-            printf("\nYou Win!!!");
-            scanf_s("\nPlay again? y/n: %s", c);
-            return;
-        }
-        case()
-    }
+    }  
+    
 }
