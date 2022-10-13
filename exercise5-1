@@ -33,7 +33,7 @@ int main(void){
                 }
                //roll default loss
                 case 2:{
-                    prinf("\nDefault! You Lose!");
+                    printf("\nDefault! You Lose!");
                     scanf_s("\nTry again? y/n: %d", c);
                     return;
                 }
