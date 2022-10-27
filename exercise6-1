@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 #define arg_size 20;
-#define min_lim 0;
+#define min_lim 1;
 #define max_lim 100;
 
 srand(time(NULL));
