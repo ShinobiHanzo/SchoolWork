@@ -2,17 +2,13 @@
 #include <time.h>
 #include <stdlib.h>
 #define arg_size 20;
-#define min_lim 1;
-#define max_lim 100;
-
-srand(time(NULL));
 
 int main(void){
     int arg1[arg_size];
     int arg2[arg_size];
     int arg3[arg_size];
     for(size_t i = 0; i<arg_size; ++i){
-        arg1[i] = (rand() % (min_lim - max_lim));
+        arg1[i] = (srand(time(NULL)%100));
         printf("%7u%13d\n", i, arg1[i]);
     }
 }
