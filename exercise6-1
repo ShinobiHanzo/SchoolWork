@@ -16,7 +16,31 @@ int main(void) {
 }
 
 
-________________________________________________________"
+________________________________________________________'
+
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+//Array Size var
+#define arg_size 20
+
+int main(void) {
+    int arg1[arg_size];
+    //int arg2[arg_size];
+    //int arg3[arg_size];
+    for (size_t i = 0; i < arg_size; ++i) {
+        arg1[i] = (rand() % 100);
+        printf("%7u%13d\n", i, arg1[i]);
+    }
+}
+
+
+-------------------------------------------------------
+
+
+
+
 
 #include <stdio.h>
 #define SIZE 5
