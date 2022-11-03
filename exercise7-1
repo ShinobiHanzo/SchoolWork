@@ -17,7 +17,7 @@ int str_len(char* ptr)
 void revstr(char* st)
 {
     int len, i;
-    char* start, * end, temp;
+    char *start, *end, temp;
     len = str_len(st);
     start = st;
     end = st;
