@@ -3,23 +3,23 @@
 int main() {
 	float avg;
 	printf("please enter scores: \n");
-	float Score1 = 0;
-	float Score2 = 0;
-	float Score3 = 0;
-	scanf_s("%d \n", &Score1);
-	scanf_s("%d \n", &Score2);
-	scanf_s("%d \n", &Score3);
+	int Score1 = 0;
+	int Score2 = 0;
+	int Score3 = 0;
+	scanf_s("%d", &Score1);
+	scanf_s(" %d", &Score2);
+	scanf_s(" %d", &Score3);
 	
 	float temp = Score1 + Score2 + Score3;
 	avg = temp/3;
 
 	if (avg >= 75) {
 		printf("Score1  Score2  Score3  Average  Grade\n");
-			printf("%5d - %13d - %21d - %2f - A", Score1, Score2, Score3, avg);
+		printf("%5d - %5d - %5d - %2f - A", Score1, Score2, Score3, avg);
 	}
 	else {
 		printf("Score1  Score2  Score3  Average  Grade\n");
-		printf("%5d - %13d - %21d - %2f - B", Score1, Score2, Score3, avg);
+		printf("%5d - %5d - %5d - %2f - B", Score1, Score2, Score3, avg);
 	}
 
 }
