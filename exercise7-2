@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+    unsigned float avg;
+    printf("please enter scores: \n");
+    int Score1 = scanf("%d", &Score1);
+    int Score2 = scanf("%d", &Score2);
+    int Score3 = scanf("%d", &Score3);
+
+    float temp = Score1 + Score2 + Score3;
+    avg = temp % 3;
+
+    if( avg >= 75){
+        print("")
+    }
+
+}
