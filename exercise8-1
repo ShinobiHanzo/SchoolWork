@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int num1, num2, temp;
+int;
+
+int main(void) {
+    printf("please enter first number: ");
+    scanf("%d", &num1);
+    printf("\nplease enter second number: ");
+    scanf("%d", &num2);
+
+    printf("%d, %d", num1, num2);
+}
+
+int swap(void){
+    temp = num1;
+    num1 = num2;
+    num2 = num1;
+    printf("%d, %d", num1, num2);
+
+    
+}
