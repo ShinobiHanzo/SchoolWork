@@ -17,7 +17,7 @@ int swap(void){
     temp = num1;
     num1 = num2;
     num2 = num1;
-    printf("Wehn values are swapped: %d, %d", num1, num2);
+    printf("When values are swapped: %d, %d", num1, num2);
     temp = num1;
     num1 = num2;
     num2 = num1;
