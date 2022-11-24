@@ -10,7 +10,7 @@ int main(void) {
     printf("\nplease enter second number: ");
     scanf_s("%d", &num2);
 
-    swap();
+    swap(num1, num2);
     printf("%d, %d", num1, num2);
 }
 
@@ -26,7 +26,7 @@ void value(int num1, int num2){
     num2 = num1;    
 }
 
-void swap(num1, num2) {
+void swap(int num1, int num2) {
     temp = num1;
     num1 = num2;
     num2 = num1;
