@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int num1, num2, temp;
-int;
+int ;
 
 int main(void) {
     printf("please enter first number: ");
@@ -9,7 +9,7 @@ int main(void) {
     printf("\nplease enter second number: ");
     scanf("%d", &num2);
 
-    swap();
+    int swap();
     printf("%d, %d", num1, num2);
 }
 
@@ -22,3 +22,4 @@ int swap(void){
     num1 = num2;
     num2 = num1;
 }
+
