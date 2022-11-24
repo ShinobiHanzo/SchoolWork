@@ -30,7 +30,7 @@ void swap(int num1, int num2) {
     temp = num1;
     num1 = num2;
     num2 = num1;
-    printf("Wehn values are swapped: %d, %d", num1, num2);
+    printf("Wehn values are swapped: num1 = %d, num2 = %d", num1, num2);
     temp = num1;
     num1 = num2;
     num2 = num1;
