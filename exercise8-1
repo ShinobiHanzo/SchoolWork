@@ -14,7 +14,11 @@ int main(void) {
     printf("%d, %d", num1, num2);
 }
 
-
+void reference(int* num1, int* num2){
+    temp = *num1;
+    *num1 = *num2;
+    *num2 = temp;
+}
 
 void swap(num1, num2) {
     temp = num1;
