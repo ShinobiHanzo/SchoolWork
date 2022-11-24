@@ -1,25 +1,26 @@
 #include <stdio.h>
 
 int num1, num2, temp;
-int ;
+int;
+
 
 int main(void) {
     printf("please enter first number: ");
-    scanf("%d", &num1);
+    scanf_s("%d", &num1);
     printf("\nplease enter second number: ");
-    scanf("%d", &num2);
+    scanf_s("%d", &num2);
 
-    int swap();
+    return swap();
     printf("%d, %d", num1, num2);
 }
 
-int swap(void){
+int swap(void) {
     temp = num1;
     num1 = num2;
     num2 = num1;
-    printf("When values are swapped: %d, %d", num1, num2);
+    printf("Wehn values are swapped: %d, %d", num1, num2);
     temp = num1;
     num1 = num2;
     num2 = num1;
+    return main();
 }
-
