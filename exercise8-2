@@ -1,6 +1,23 @@
-//how to linear sort an array by decending order?
-if(v[i]<v[i+1])
+#include <stdio.h>
+#include <time.h>
 
+
+//how to linear sort an array by decending order
+//if(v[i]<v[i+1])
+int x;
+
+int main(void){
+    printf("enter a number:");
+    scnaf_s("%d", &x);
+    int a[x];
+    srand(time(NULL));
+
+    for (size_t i = 0; i < x; i++)
+    {
+        a[i] = (rand %100)
+    }
+    
+}
 
 for(int i=1;i<n;i++)
     if(v[i-1]<v[i])    //is the problem here?
