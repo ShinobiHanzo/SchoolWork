@@ -10,8 +10,9 @@ int main(void) {
     printf("\nplease enter second number: ");
     scanf_s("%d", &num2);
 
-    swap(num1, num2);
-    printf("%d, %d", num1, num2);
+    printf("After swap: num1 = %d, num2 = %d", num2, num1);
+    reference(&num1, &num2);
+    printf("Call by value: num1 = %d, num2 = %d");
 }
 
 void reference(int* num1, int* num2){
