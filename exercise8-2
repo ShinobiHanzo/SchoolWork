@@ -2,8 +2,7 @@
 #include <time.h>
 
 
-//how to linear sort an array by decending order
-//if(v[i]<v[i+1])
+//if(a[i]<a[i+1])
 int x;
 
 int main(void){
@@ -12,15 +11,23 @@ int main(void){
     int a[x];
     srand(time(NULL));
 
+    printf("\nnew list: \n");
     for (size_t i = 0; i < x; i++)
     {
-        a[i] = (rand %100)
+        a[i] = rand() %100;
+        printf("%d, ", a[i]);
     }
+    printf("\nlist sorted: \n");
+    for(int i=1;i<x;i++){
+        while (a[i]!<a[i+1]){
+
+        }
+   
     
 }
 
-for(int i=1;i<n;i++)
-    if(v[i-1]<v[i])    //is the problem here?
+
+    if(a[i-1]<a[i])    //is the problem here?
 {
         x=v[i-1];v[i-1]=v[i];v[i]=x;
         ok=0;
