@@ -9,6 +9,7 @@ int main(void) {
     printf("\nplease enter second number: ");
     scanf("%d", &num2);
 
+    swap();
     printf("%d, %d", num1, num2);
 }
 
