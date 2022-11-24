@@ -11,3 +11,10 @@ int main(void) {
 
     printf("%d, %d", num1, num2);
 }
+
+int swap(void){
+    temp = num1;
+    num1 = num2;
+    num2 = num1;
+    
+}
