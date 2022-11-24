@@ -12,21 +12,24 @@ int main(void) {
 
     printf("After swap: num1 = %d, num2 = %d", num2, num1);
     reference(&num1, &num2);
-    printf("Call by value: num1 = %d, num2 = %d");
+    
 }
 
-void reference(int* num1, int* num2){
+void reference(int *num1, int *num2) {
     temp = *num1;
     *num1 = *num2;
     *num2 = temp;
+    printf("Call by value: num1 = %d, num2 = %d");
 }
 
-void value(int num1, int num2){
+void value(int num1, int num2) {
     temp = num1;
     num1 = num2;
-    num2 = num1;    
+    num2 = num1;
+    printf("Call by value: num1 = %d, num2 = %d");
 }
 
+/*
 void swap(int num1, int num2) {
     temp = num1;
     num1 = num2;
@@ -37,3 +40,4 @@ void swap(int num1, int num2) {
     num2 = num1;
     return main();
 }
+*/
