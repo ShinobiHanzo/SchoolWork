@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int num1, num2, temp;
+int ;
+
+int main(void){
+    scanf_s("please enter first number: %d", &num1);
+    scanf_s("please enter second number: %d", &num2);
+
+    
+}
