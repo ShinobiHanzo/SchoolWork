@@ -1,44 +1,37 @@
 #include <stdio.h>
 
 int num1, num2, temp;
-int;
 
+void reference(int* num1, int* num2) {
+    temp = *num1;
+    *num1 = *num2;
+    *num2 = temp;
+    printf("\nAfter swap : num1 = % d, num2 = % d", *num1,*num2);
+
+}
+
+void value(int num1, int num2) {
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+    printf("\nAfter swap: num1 = %d, num2 = %d", num1, num2);
+
+}
 
 int main(void) {
     printf("please enter first number: ");
     scanf_s("%d", &num1);
     printf("\nplease enter second number: ");
     scanf_s("%d", &num2);
-
-    printf("After swap: num1 = %d, num2 = %d", num2, num1);
-    reference(&num1, &num2);
-    printf("After swap: num1 = %d, num2 = %d", num2, num1);
     value(num1, num2);
+    printf("\nCall by value: num1 = %d, num2 = %d", num1, num2);
+    reference(&num1, &num2);
+    printf("\nCall by Reference : num1 = % d, num2 = % d", num1, num2);
+
+
+
 }
 
-void reference(int *num1, int *num2) {
-    temp = *num1;
-    *num1 = *num2;
-    *num2 = temp;
-    printf("Call by Reference: num1 = %d, num2 = %d");
-}
 
-void value(int num1, int num2) {
-    temp = num1;
-    num1 = num2;
-    num2 = num1;
-    printf("Call by value: num1 = %d, num2 = %d");
-}
 
-/*
-void swap(int num1, int num2) {
-    temp = num1;
-    num1 = num2;
-    num2 = num1;
-    printf("Wehn values are swapped: num1 = %d, num2 = %d", num1, num2);
-    temp = num1;
-    num1 = num2;
-    num2 = num1;
-    return main();
-}
-*/
+
