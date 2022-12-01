@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-
+SIZE = 6;
 int arg_size = 6;
 
 int main(void){
