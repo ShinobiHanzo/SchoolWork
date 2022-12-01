@@ -7,7 +7,16 @@ int main(void){
     char* p = a;
     int count = 0;
 
+    for (size_t i = 0; i < strlen(a); i++)
+    {
+        if (a[i]=="a")
+        {
+            count++;
+        }
+        
+    }
     
+    printf("there are %d amount of -a- in -%c-", count, 'a');
 }
 
 
