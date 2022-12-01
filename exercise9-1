@@ -2,28 +2,28 @@
 #include <time.h>
 #include <stdlib.h>
 
-SIZE = 6;
-int arg_size = 6;
 
-int main(void){
+int ticket[6];
+int prize[6];
+
+int main(void) {
 
     //ticket and prize size
-    int ticket[] = arg_size;
-    int prize[] = arg_size;
     int points = 0;
+    int arg_size = 6;
 
     //prize numbers randomisation
     srand(time(NULL));
     for (size_t i = 0; i < arg_size; i++)
     {
-        prize[i-1] = rand() %42;
+        prize[i - 1] = rand() % 42;
 
     }
 
     //ticket system:
     for (size_t i = 0; i < arg_size; i++)
     {
-        printf("\nEnter number %d:", i+1);
+        printf("\nEnter number %d: ", i + 1);
         scanf_s("%d", &ticket[i]);
     }
 
@@ -32,11 +32,11 @@ int main(void){
     {
         if (ticket[i] == prize[i])
         {
-            points +=1;
+            points += 1;
         }
-        
+
     }
-    
+
     //print results:
     printf("\nPrize numbers: ");
     for (size_t i = 0; i < arg_size; i++)
@@ -61,8 +61,7 @@ int main(void){
     case 2:
         printf("\nFifth prize!");
     default:
-        
+        printf("\nNo prize.");
     }
-    
-    
+
 }
