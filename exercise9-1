@@ -37,5 +37,32 @@ int main(void){
         
     }
     
+    //print results:
+    printf("\nPrize numbers: ");
+    for (size_t i = 0; i < arg_size; i++)
+    {
+        printf(" %d", prize[i]);
+    }
+    printf("\n      tickets: ");
+    for (size_t i = 0; i < arg_size; i++)
+    {
+        printf(" %d", ticket[i]);
+    }
+    switch (points)
+    {
+    case 6:
+        printf("\nTop prize!");
+    case 5:
+        printf("\nSecond prize!");
+    case 4:
+        printf("\nThird prize!");
+    case 3:
+        printf("\nFourth prize!");
+    case 2:
+        printf("\nFifth prize!");
+    default:
+        
+    }
+    
     
 }
