@@ -16,7 +16,7 @@ int main(void) {
     srand(time(NULL));
     for (size_t i = 0; i < arg_size; i++)
     {
-        prize[i - 1] = rand() % 42;
+        prize[i - 1] = (rand() %1);
 
     }
 
@@ -48,19 +48,28 @@ int main(void) {
     {
         printf(" %d", ticket[i]);
     }
-    switch (points)
+
+    if (points == 6)
     {
-    case 6:
         printf("\nTop prize!");
-    case 5:
+    }
+    else if (points ==5)
+    {
         printf("\nSecond prize!");
-    case 4:
+    }
+    else if (points == 4)
+    {
         printf("\nThird prize!");
-    case 3:
+    }
+    else if (points ==3)
+    {
         printf("\nFourth prize!");
-    case 2:
+    }
+    else if (points ==2)
+    {
         printf("\nFifth prize!");
-    default:
+    }
+    else if (points <= 1) {
         printf("\nNo prize.");
     }
 
