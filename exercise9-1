@@ -14,7 +14,6 @@ int main(void){
 
     //prize numbers randomisation
     srand(time(NULL));
-
     for (size_t i = 0; i < arg_size; i++)
     {
         prize[i-1] = rand() %42;
@@ -27,8 +26,14 @@ int main(void){
         printf("\nEnter number %d:", i+1);
         scanf_s("%d", &ticket[i]);
     }
+
+    //prize point check:
     for (size_t i = 0; i < arg_size; i++)
     {
+        if (ticket[i] == prize[i])
+        {
+            points +=1;
+        }
         
     }
     
