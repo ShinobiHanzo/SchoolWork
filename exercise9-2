@@ -20,4 +20,3 @@ int main(void){
     printf("there are %d amount of -a- in -%c-", count, 'a');
 }
 
-
