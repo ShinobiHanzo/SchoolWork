@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+
+int arg_size = 6;
+
+int main(void){
+
+    //ticket and prize size
+    int ticket[] = arg_size;
+    int prize[] = arg_size;
+    int points = 0;
+
+    //prize numbers randomisation
+    srand(time(NULL));
+
+    for (size_t i = 0; i < arg_size; i++)
+    {
+        prize[i-1] = rand() %42;
+
+    }
+
+    //ticket system:
+    for (size_t i = 0; i < arg_size; i++)
+    {
+        printf("\nEnter number %d:", i+1);
+        scanf_s("%d", &ticket[i]);
+    }
+    for (size_t i = 0; i < arg_size; i++)
+    {
+        
+    }
+    
+    
+}
