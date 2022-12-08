@@ -38,7 +38,7 @@ void draw()
 			if (i == 0 || i == width - 1
 				|| j == 0
 				|| j == height - 1) {
-				printf("#");
+				printf("X");
 			}
 			else {
 				if (i == x && j == y)
