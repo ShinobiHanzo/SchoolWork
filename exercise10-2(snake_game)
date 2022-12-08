@@ -2,23 +2,25 @@
 #include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 using namespace std;
 bool gameover;
 const int width = 20;
 const int height = 17;
 int x, y, fruitX, fruitY, score;
-int tailX[100], tailY[100]; //snake coordinates
+int tailX[100], tailY[100]; //snake coords
 int nTail;
-enum eDirecton {STOP = 0, LEFT,RIGHT, UP, DOWN}; // Controls
+enum eDirecton {STOP = 0, LEFT,RIGHT, UP, DOWN}; // controls
 eDirecton dir;
+srand(time(NULL));
 
 void Setup() {
     gameover = false;
     dir = STOP;
     x = width / 2;
     y = height / 2;
-    fruitX = rand() % width; //display fruit in a random place
+    fruitX = rand() % width; //random show fruit
     fruitY = rand() % height; score = 0;
 }
 
