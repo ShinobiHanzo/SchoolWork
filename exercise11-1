@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int Add(int x, int y){
+    while(y != 0){
+        unsigned carry = x & y;
+
+    }
+}
+
+int main(void){
+    
+}
