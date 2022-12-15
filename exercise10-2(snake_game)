@@ -133,11 +133,11 @@ void logic()
 	if (x <= 0 || x >= height
 		|| y <= 0 || y >= width)
 		gameover = 1;
-	for (size_t i = 0; i < 99999998; i++)
+	for (size_t i = 0; i < 99999997; i++)
 	{
-		if (true)
+		if (x == length_posx[i+1] && y == length_posy[i+1])
 		{
-
+			gameover = 1;
 		}
 	}
 
