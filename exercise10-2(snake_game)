@@ -105,6 +105,8 @@ void logic()
 	{
 		length_posx[i] = length_posx[i-1];
 		length_posy[i] = length_posy[i-1];
+		length_posx[i - 1] = tempX;
+		length_posy[i - 1] = tempY;
 	}
 
 	switch (flag) {
