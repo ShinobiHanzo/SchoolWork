@@ -40,7 +40,7 @@ label2:
 // Function to draw the boundaries
 void draw()
 {
-	Sleep(500);
+	Sleep(200);
 	system("cls");
 	for (i = 0; i < height; i++) {
 		for (j = 0; j < width; j++) {
@@ -55,8 +55,10 @@ void draw()
 				else if (i == fruitx
 					&& j == fruity)
 					printf("*");
-				else if (i == length_posx[(score % 10)] && j == length_posy[(score % 10)])
+				else if (i == length_posx[(score % 10)] && j == length_posy[(score % 10)]) {
 					printf("x");
+				}
+			
 				else
 					printf(" ");
 			}
@@ -128,12 +130,15 @@ void logic()
 
 
 	// If the game is over
-	if (x < 0 || x > height
-		|| y < 0 || y > width)
+	if (x <= 0 || x >= height
+		|| y <= 0 || y >= width)
 		gameover = 1;
-	for (size_t i = 0; i < 99999999; i++)
+	for (size_t i = 0; i < 99999998; i++)
 	{
+		if (true)
+		{
 
+		}
 	}
 
 	// If snake reaches the fruit
