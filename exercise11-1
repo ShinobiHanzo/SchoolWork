@@ -22,4 +22,5 @@ int main(void){
 
     printf("Your result is: %d", Add(x, y));
 
+    return 0;
 }
