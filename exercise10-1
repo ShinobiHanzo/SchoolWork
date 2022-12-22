@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <iostream>
+
+int num1, num2;
+
+void main(){
+    printf("Input 2 numbers:");
+    printf("\nnum1: ");
+    scanf_s("%d", &num1);
+    printf("\nnum2: ");
+    scanf_s("%d", &num2);
+}
