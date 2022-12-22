@@ -1,3 +1,25 @@
 #include <iostream>
 #include <stdio.h>
 
+
+int main() {
+    FILE* fp;
+    int test_var[10];
+    int min, max;
+
+    fp = fopen("example.txt", "w");
+    if (fp == NULL)
+    {
+        printf("ERROR");
+        return 1;
+    }
+    else
+    {
+        for (size_t i = 0; i < 10; i++)
+        {
+
+        }
+    }
+    
+
+}
