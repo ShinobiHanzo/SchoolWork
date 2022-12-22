@@ -1,25 +1,43 @@
 #include <iostream>
 #include <stdio.h>
+#define SIZE 10
 
 
 int main() {
-    FILE* fp;
-    int test_var[10];
-    int min, max;
+	FILE* fp;
+	int test_var[SIZE];
+	int min, max;
 
-    fp = fopen("example.txt", "w");
-    if (fp == NULL)
-    {
-        printf("ERROR");
-        return 1;
-    }
-    else
-    {
-        for (size_t i = 0; i < 10; i++)
-        {
+	fp = fopen("example.txt", "w");
+	if (fp == NULL)
+	{
+		printf("ERROR");
+		return 1;
+	}
+	else
+	{
+		for (size_t i = 0; i < SIZE; i++)
+		{
+			printf("student_ID%d: ", i + 1);
+			scanf_s("%d", &test_var[i + 1]);
+		}
+		test_var[8] = test_var[0];
+		test_var[9] = test_var[0];
+		for (size_t i = 0; i < SIZE; i++)
+		{
+			fprintf(fp, "student%d %t %d \n", i + 1, test_var[i]);
+			if (test_var[8] > test_var[i])
+			{
+				test_var[8] = test_var[i];
+			}
+			if (test_var[9]<test_var[i])
+			{
+				test_var[9] = test_var[i];
+			}
+			fprintf(fp, "High score: %d \n Lowest score: %d", test_var[9], test_var[8]);
+		}
+		
+	}
 
-        }
-    }
-    
-
+	fclose(fp);
 }
