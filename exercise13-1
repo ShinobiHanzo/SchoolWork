@@ -1,54 +1,20 @@
 #include <stdio.h>
 
-#define SIZE 100
-char name_input;
+struct StudentData
+{
+    unsigned int StuNum;
+    char name[30];
+    double score;
+};
 
-
-int make_file() {
-	FILE *fp;
-	int test_var[SIZE];
-	int min, max;
-
-    scanf_s("new file name: %s", &name_input);
-    if(name_input == "!"){
-        scanf_s("please input existing file name: %s", &name_input);
-    }
-	fp = fopen("%s.txt", "w", name_input);
-	if (fp == NULL)
-	{
-		printf("ERROR");
-		return 1;
-	}
-	else
-	{
-		int min = 100;
-		int max = 0;
-		for (int i = 0; i < SIZE; i++)
-		{
-			printf("student_ID%d: ", i + 1);
-			scanf_s("%d", &test_var[i]);
-		}
-		//test_var[8] = test_var[0];
-		//test_var[9] = test_var[0];
-		for (int i = 0; i < SIZE; i++)
-		{
-			fprintf(fp, "student%d, %d \n", i + 1, test_var[i]);
-			if (test_var[i] > max)max = test_var[i];
-			if (test_var[i] < min)min = test_var[i];
-			
-		}
-		fprintf(fp, "High score: %d \n Lowest score: %d", max, min);
-		printf("done");
-	}
-
-	fclose(fp);
-}
+unsigned int enterChoice(void);
+void textFile(FILE* readPtr);
+void updateRecord(FILE* fPtr);
+void newRecord(FILE* fPtr);
+void deleteRcord(FILE* fPtr);
 
 
 void main(){
-    int name_list[SIZE];
-    int stu_id[SIZE];
-    int score[SIZE];
-    make_file(name_list);
+
 }
 
