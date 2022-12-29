@@ -1,16 +1,19 @@
 #include <stdio.h>
 
-#define SIZE
-int list_size;
+#define SIZE 100
 char name_input;
-int name_list[SIZE];
+
 
 int make_file() {
 	FILE *fp;
 	int test_var[SIZE];
 	int min, max;
 
-	fp = fopen("example.txt", "w");
+    scanf_s("new file name: %s", &name_input);
+    if(name_input == "!"){
+        scanf_s("please input existing file name: %s", &name_input);
+    }
+	fp = fopen("%s.txt", "w", name_input);
 	if (fp == NULL)
 	{
 		printf("ERROR");
@@ -43,6 +46,6 @@ int make_file() {
 
 
 void main(){
-
+    int name_list[SIZE];
 }
 
