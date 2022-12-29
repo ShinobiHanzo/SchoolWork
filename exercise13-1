@@ -47,6 +47,8 @@ int make_file() {
 
 void main(){
     int name_list[SIZE];
-    make_file(name_list)
+    int stu_id[SIZE];
+    int score[SIZE];
+    make_file(name_list);
 }
 
