@@ -7,14 +7,14 @@ struct StudentData
     double score;
 };
 
-unsigned int enterChoice(void);
-void textFile(FILE* readPtr);
-void updateRecord(FILE* fPtr);
-void newRecord(FILE* fPtr);
-void deleteRcord(FILE* fPtr);
-
-
 void main(){
+    unsigned int enterChoice(void);
+    void textFile(FILE* readPtr);
+    void updateRecord(FILE* fPtr);
+    void newRecord(FILE* fPtr);
+    void deleteRcord(FILE* fPtr);
 
+    if ((cfPtr = fopen("studnets.dat", "rb+")) ==NULL) puts("File could not be opened.");
+    if ((writePtr = fopen("studnets.txt", "w")) ==NULL) puts("File could not be opened.");
+    if ((cfPtr = fopen("studnets.dat", "wb")) ==NULL) puts("Files could not be opened.");
 }
-
