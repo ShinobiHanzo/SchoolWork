@@ -1,4 +1,3 @@
-//#include "pch.h"
 #include <stdio.h>
 
 struct StudentData
@@ -17,22 +16,23 @@ void deleteRcord(FILE* fPtr);
 void main() {
 	FILE *cfPtr;
 	FILE *writePtr;
+	StudentData StuNum, name, score;
 
-	if ((cfPtr = fopen("studnets.dat", "rb+")) == NULL) 
-        puts("File could not be opened.");
-	else if ((writePtr = fopen("studnets.txt", "w")) == NULL) 
-        puts("File could not be opened.");
-	else if ((cfPtr = fopen("studnets.dat", "wb")) == NULL) 
-        puts("Files could not be opened.");
-    else{
-        puts("enter the ID, name and score.");
-        puts("Enter EOF to end input");
-        printf("%s", "?");
-        while (!feof(cfPtr)){
-            fprintf(cfPtr, "%d %s %.2f \n", StuNum, name, score);
-            printf("%s", "?");
-            scanf_s("\n%d%29s%lf", &StuNum, name, sizeof(name), &balance);
-        }
-        fclose(cfPtr);
-    }
+	if ((cfPtr = fopen("studnets.dat", "rb+")) == NULL)
+		puts("File could not be opened.");
+	else if ((writePtr = fopen("studnets.txt", "w")) == NULL)
+		puts("File could not be opened.");
+	else if ((cfPtr = fopen("studnets.dat", "wb")) == NULL)
+		puts("Files could not be opened.");
+	else {
+		puts("enter the ID, name and score.");
+		puts("Enter EOF to end input");
+		printf("%s", "?");
+		while (!feof(cfPtr)) {
+			fprintf(cfPtr, "%d %c %d \n", StuNum, name, score);
+				printf("%s", "?");
+			scanf_s("\n%d%29c%d", &StuNum, name, sizeof(name), &score);
+		}
+		fclose(cfPtr);
+	}
 }
