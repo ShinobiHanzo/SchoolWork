@@ -1,3 +1,4 @@
+#include "pch.h"
 #include <stdio.h>
 
 struct StudentData
@@ -24,6 +25,11 @@ void main() {
 	else if ((cfPtr = fopen("studnets.dat", "wb")) == NULL) 
         puts("Files could not be opened.");
     else{
-        puts("enter")
+        puts("enter the ID, name and score.");
+        puts("Enter EOF to end input");
+        printf("%s", "?");
+        while (!feof(stdin)){
+            fprintf(cfPrt, "%d %s %.2f \n", StuNum, name, score)
+        }
     }
 }
