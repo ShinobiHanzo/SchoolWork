@@ -29,7 +29,7 @@ void main() {
         puts("Enter EOF to end input");
         printf("%s", "?");
         while (!feof(cfPtr)){
-            fprintf(cfPtr, "%d %s %.2f \n", StuNum, name, score)l
+            fprintf(cfPtr, "%d %s %.2f \n", StuNum, name, score);
             printf("%s", "?");
             scanf_s("\n%d%29s%lf", &StuNum, name, sizeof(name), &balance);
         }
