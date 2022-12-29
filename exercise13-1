@@ -4,7 +4,7 @@
 char name_input;
 
 
-int make_file(int name_list[SIZE]) {
+int make_file() {
 	FILE *fp;
 	int test_var[SIZE];
 	int min, max;
@@ -47,5 +47,6 @@ int make_file(int name_list[SIZE]) {
 
 void main(){
     int name_list[SIZE];
+    make_file(name_list)
 }
 
