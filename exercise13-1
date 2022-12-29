@@ -28,7 +28,7 @@ void main() {
         puts("enter the ID, name and score.");
         puts("Enter EOF to end input");
         printf("%s", "?");
-        while (!feof(stdin)){
+        while (!feof(cfPtr)){
             fprintf(cfPtr, "%d %s %.2f \n", StuNum, name, score)l
             printf("%s", "?");
             scanf_s("\n%d%29s%lf", &StuNum, name, sizeof(name), &balance);
