@@ -39,5 +39,5 @@ int bitCheck(){
 
 
 int main (){    
-    bitCheck(input)
+    bitCheck(input);
 }
