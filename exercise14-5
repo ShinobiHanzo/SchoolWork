@@ -39,5 +39,5 @@ int bitCheck(){
 
 
 int main (){    
-    struct parityCheck parity;
+    bitCheck(input)
 }
