@@ -3,27 +3,34 @@
 #include<string.h>
 
 int input;
-int bitform_in[8];
-int bitform_out[9];
+
+struct parityCheck
+{
+    int bitform_in[8];
+    int bitform_out[9];
+};
+
+
 
 int bitCheck(){
+    struct parityCheck parity;
     for (size_t i = 0; i < 8; i++)
     {
-        bitform_in[i-1] = 0;
-        bitform_out[i-1]=0;
+        parity.bitform_in[i-1] = 0;
+        parity.bitform_out[i-1]=0;
     }
-    bitform_out[8]=0;
-    if((input%2)!=0)bitform_out[8]=1;
+    parity.bitform_out[8]=0;
+    if((input%2)!=0)parity.bitform_out[8]=1;
     int a= input;
     while(input != 0){
-        if(input>=128)bitform_in[0],bitform_out[0]=1;input-=128;
-        if(input>=64)bitform_in[1],bitform_out[1]=1;input-=64;
-        if(input>=32)bitform_in[2],bitform_out[2]=1;input-=32;
-        if(input>=16)bitform_in[3],bitform_out[3]=1;input-=16;
-        if(input>=8)bitform_in[4],bitform_out[4]=1;input-=8;
-        if(input>=4)bitform_in[5],bitform_out[5]=1;input-=4;
-        if(input>=2)bitform_in[6],bitform_out[6]=1;input-=2;
-        if(input>=1)bitform_in[7],bitform_out[7]=1;input-=1;
+        if(input>=128)parity.bitform_in[0],parity.bitform_out[0]=1;input-=128;
+        if(input>=64)parity.bitform_in[1],parity.bitform_out[1]=1;input-=64;
+        if(input>=32)parity.bitform_in[2],parity.bitform_out[2]=1;input-=32;
+        if(input>=16)parity.bitform_in[3],parity.bitform_out[3]=1;input-=16;
+        if(input>=8)parity.bitform_in[4],parity.bitform_out[4]=1;input-=8;
+        if(input>=4)parity.bitform_in[5],parity.bitform_out[5]=1;input-=4;
+        if(input>=2)parity.bitform_in[6],parity.bitform_out[6]=1;input-=2;
+        if(input>=1)parity.bitform_in[7],parity.bitform_out[7]=1;input-=1;
     }
 
 }
@@ -32,26 +39,5 @@ int bitCheck(){
 
 
 int main (){    
-   char msg_bit_input[128];    
-   char msg_bit_output[128];    
-   char caruno='1';    
-   int i;    
-   int one = 0;
-   printf("Insert the byte: "); 
-   scanf("%s", msg_bit_input);
-   strcpy (msg_bit_output, msg_bit_input); 
-   for(i=0;i<8;i++){        
-       if(msg_bit_input[i]==caruno){            
-           one++;
-       }
-   }
-   if(one%2==0){        
-       //byte is even        
-       strcat (msg_bit_output, "0");    
-   } else if(one%2==1){
-       //byte is uneven      
-       strcat (msg_bit_output, "1");
-   }
-   printf("The result is: %s", msg_bit_output);    
-   return (EXIT_SUCCESS); 
+    struct parityCheck parity;
 }
