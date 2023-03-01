@@ -1,11 +1,48 @@
 #include <iostream>
 using namespace std;
 
-int cubeByValue(int number){
-    return number*number*nuumber;
+int cubeByValue(int v){
+    return v*v*v;
+}
+void cubeByRef(int &number){
+    number = number*number*number;
 }
 
 int main(){
-    int x;
-    int &z = x; 
+    int x, app;
+    int &z = x;
+    cout << "1= ByValue, 2= ByRef: "
+    cin >> app;
+    switch (app){
+        case 1:
+            cout << "first number: ";
+            cin >> x;
+            cout << "x = " << x << "pre-ByValue" << endl;
+            cout << "ByValue = " << cubeByValue(x) << endl;
+            cout << "x = " << x << "after ByValue" << endl << endl;
+            cout << "Second number: ";
+            cin >> z;
+            cout << "x = " << x << endl;
+            cout << "z = " << z << endl;
+            z = cubeByValue(z);
+            cout << "x^3 = " << x << endl;
+            cout << "z^3 = " << z << endl;
+            break
+        case 2:
+            count << "Enter: ";
+            cin >> x;
+            cout << "x = " << x << "pre-ByRef" << endl;
+            cubeByRef(x);
+            cout << "x = " << x << "after ByRef" << endl << endl;
+            cout << "Enter second: ";
+            cin >> z;
+            cout << "x = " << x << endl;
+            cout << "z = " << z << endl;
+            cubeByRef(z);
+            cout << "x^3 = " << x << endl;
+            cout << "z^3 = " << z << endl;
+            break;
+        default:
+            cout << "Error" << endl;
+    }
 }
