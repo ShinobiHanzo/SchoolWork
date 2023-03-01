@@ -7,5 +7,5 @@ int cubeByValue(int number){
 
 int main(){
     int x;
-    int &z = x;
+    int &z = x; 
 }
